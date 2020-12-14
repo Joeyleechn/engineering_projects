@@ -1,0 +1,14 @@
+{
+"000001.SZ": {"strategy": {"upper_limit":"10000000"},
+             "args": {"position": "300",
+                      "start_time": "11:00",
+                      "end_time": "14:30",
+                      "num_section": "1",
+                      "threshold": "0.2"}},
+"603035.SH": {"strategy": {"upper_limit":"10000000"},
+             "args": {"position": "300",
+                      "start_time": "11:00",
+                      "end_time": "14:30",
+                      "num_section": "1",
+                      "threshold": "0.3"}}
+}
