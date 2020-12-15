@@ -12,3 +12,6 @@ class Processor():
     ) -> None:
         self.org_name = org_name
         self.file_path = file_path
+        self.product_name = None
+        self.account_id = None
+        self.date = None

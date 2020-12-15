@@ -8,7 +8,8 @@ DATA_ROOT = './data'
 from .const import (
     ExchangeReg,
     ExchangeType,
-    ExchangeFlag
+    ExchangeFlag,
+    STANDARD_CODE_FORMAT
 )
 
 
@@ -19,6 +20,8 @@ def get_exchange_by_code(code: str) -> str:
         exchange = ExchangeType.kSSE.value
     elif re.match(ExchangeReg.SZE, code):
         exchange = ExchangeType.kSZE.value
+    elif re.match(ExchangeReg.CFEINDEX, code):
+        exchange = ExchangeType.kINDEX.value
     else:
         exchange = ExchangeType.kunknown.value
         logger.warning(f'Code: {code}, Exchange: {exchange}')
@@ -79,3 +82,10 @@ def find_partition_index(
             raise ValueError
     return word_index
     
+
+def get_clean_code(code -> str) -> str:
+    match = re.search(STANDARD_CODE_FORMAT, code)
+    if match:
+        return match.group()
+    else:
+        logger.warning('Not a valid exchange code.')
