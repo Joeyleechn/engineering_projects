@@ -1,6 +1,6 @@
 1. structure_processing
 
-Data Processing With Customized Data Structure
+Data processing with customized data structure in Python.
 
 2. course_bidding_analysis
 
